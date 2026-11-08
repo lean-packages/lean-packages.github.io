@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lean-packages — Less baggage. Leaner software distributions.</title>
+  <meta name="description" content="A collection of open-source developer tools helping developers ship leaner software distribution archives across PHP, Rust, Python, and JavaScript.">
+  <meta name="theme-color" content="#0d1117">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="lean-packages — Less baggage.">
+  <meta property="og:description" content="Open-source developer tools for creating, validating, and managing lean package distributions.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="assets/favicon-192x192.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#" class="brand" aria-label="lean-packages homepage">
+        <img src="assets/logo.png" alt="lean-packages logo" class="brand-logo" width="32" height="32">
+        <span class="brand-name">lean-packages</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#ecosystem" class="nav-link">Ecosystem</a></li>
+          <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li>
+            <a href="https://github.com/lean-packages" class="nav-link github-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Organization">
+              <svg class="icon icon-github" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Open-Source Packaging Tooling</span>
+          </div>
+          <h1 class="hero-title">
+            Lean packages.<br>
+            <span class="gradient-text">Less baggage.</span>
+          </h1>
+          <p class="hero-subtitle">
+            A collection of open-source tools helping developers ship leaner software distribution archives.
+          </p>
+          <div class="hero-actions">
+            <a href="https://github.com/lean-packages" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              <span>Explore on GitHub</span>
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              <span>View Tools</span>
+              <svg class="icon icon-arrow" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Terminal Demo Visual -->
+        <div class="hero-terminal" aria-label="Terminal demonstration of lean packaging">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots" aria-hidden="true">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title"></div>
+            </div>
+            <div class="terminal-body font-mono">
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cargo lean</span> <span class="t-flag">--dry-run</span></div>
+              <div class="terminal-output t-muted">Scanning repository for unexcluded development artifacts...</div>
+              <div class="terminal-line t-warn">Found 4 non-runtime items missing from exclude list:</div>
+              <div class="terminal-diff">
+                <div class="diff-item diff-remove">- .github/</div>
+                <div class="diff-item diff-remove">- tests/</div>
+                <div class="diff-item diff-remove">- Justfile</div>
+                <div class="diff-item diff-remove">- release.toml</div>
+              </div>
+              <div class="terminal-line t-success"><span class="t-indicator">✓</span> Package archive size reduced: <span class="t-stat">1.4 MB → 142 KB (-89.8%)</span></div>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor">_</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ecosystem Section -->
+    <section id="ecosystem" class="section ecosystem-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">MULTI-LANGUAGE ECOSYSTEM</div>
+          <h2 class="section-title">Built for each language's native packaging toolchain</h2>
+          <p class="section-subtitle">
+            Every package manager handles distribution exclusions differently. Our tools integrate seamlessly with standard language conventions without altering your git working tree.
+          </p>
+        </div>
+
+        <div class="ecosystem-grid">
+          <a href="#project-php" class="eco-card" data-lang="php">
+            <div class="eco-icon-wrap php-theme">
+              <span class="eco-lang-label">PHP</span>
+            </div>
+            <div class="eco-content">
+              <h3 class="eco-title">php-lean</h3>
+              <p class="eco-desc">Validates and enforces <code>.gitattributes</code> <code>export-ignore</code> directives for Composer packages.</p>
+              <div class="eco-target font-mono">.gitattributes</div>
+            </div>
+          </a>
+
+          <a href="#project-rust" class="eco-card" data-lang="rust">
+            <div class="eco-icon-wrap rust-theme">
+              <span class="eco-lang-label">Rust</span>
+            </div>
+            <div class="eco-content">
+              <h3 class="eco-title">cargo-lean</h3>
+              <p class="eco-desc">Audits and configures <code>[package].exclude</code> in <code>Cargo.toml</code> to strip development artifacts before publishing.</p>
+              <div class="eco-target font-mono">Cargo.toml</div>
+            </div>
+          </a>
+
+          <a href="#project-python" class="eco-card" data-lang="python">
+            <div class="eco-icon-wrap python-theme">
+              <span class="eco-lang-label">Python</span>
+            </div>
+            <div class="eco-content">
+              <h3 class="eco-title">py-lean</h3>
+              <p class="eco-desc">Detects and updates <code>source-exclude</code> patterns in <code>pyproject.toml</code> for modern Python builds.</p>
+              <div class="eco-target font-mono">pyproject.toml</div>
+            </div>
+          </a>
+
+          <a href="#project-javascript" class="eco-card" data-lang="javascript">
+            <div class="eco-icon-wrap js-theme">
+              <span class="eco-lang-label">JavaScript</span>
+            </div>
+            <div class="eco-content">
+              <h3 class="eco-title">js-lean</h3>
+              <p class="eco-desc">Audits <code>package.json</code> <code>files</code> allowlists and <code>.npmignore</code> files to maintain clean npm releases.</p>
+              <div class="eco-target font-mono">package.json / .npmignore</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="section philosophy-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">GUIDING PRINCIPLES</div>
+          <h2 class="section-title">Why lean distribution matters</h2>
+          <p class="section-subtitle">
+            Published packages are consumed thousands or millions of times. Unintentional files waste bandwidth, slow down CI, and reveal internal repository structure.
+          </p>
+        </div>
+
+        <div class="philosophy-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Smaller distribution archives</h3>
+            <p class="pillar-desc">
+              Minimizes archive payload size, reducing download latency and disk consumption across CI runners, server deployments, and local development environments worldwide.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Explicit package exclusions</h3>
+            <p class="pillar-desc">
+              Prevents accidental leakage of test suites, mock data, private CI credentials, IDE settings, and internal documentation into public registry mirrors.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Language-native tooling</h3>
+            <p class="pillar-desc">
+              No alien configuration formats or heavy runtime wrappers. Every tool works directly with your ecosystem’s native manifests and package manager standards.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Open-source &amp; community-driven</h3>
+            <p class="pillar-desc">
+              Transparent, permissively licensed (MIT), and built collaboratively by developers who care about sustainable, efficient software distribution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Cards Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">PROJECT DIRECTORY</div>
+          <h2 class="section-title">Tools &amp; Utilities</h2>
+          <p class="section-subtitle">
+            Explore the specialized packages available across the lean-packages ecosystem.
+          </p>
+        </div>
+
+        <div class="projects-list">
+          <!-- PHP: php-lean -->
+          <article class="project-card" id="project-php" data-repo="php-lean">
+            <div class="project-card-header">
+              <div class="project-meta">
+                <span class="lang-badge lang-php">PHP</span>
+                <span class="version-badge font-mono" id="version-php-lean" title="Latest version from GitHub API">
+                  <span class="v-text">v0.9.2</span>
+                  <span class="v-status" aria-hidden="true"></span>
+                </span>
+              </div>
+              <a href="https://github.com/lean-packages/php-lean" class="repo-link" target="_blank" rel="noopener noreferrer" aria-label="php-lean on GitHub">
+                <span class="repo-name">lean-packages/php-lean</span>
+                <svg class="icon icon-external" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">php-lean</h3>
+              <p class="project-description">
+                A library and CLI tool for validating and managing <code>.gitattributes</code> <code>export-ignore</code> rules to ensure development-only files do not get packaged in published Composer distribution archives.
+              </p>
+
+              <!-- Dynamic Install Tabs -->
+              <div class="install-container">
+                <div class="install-tabs" role="tablist" aria-label="Installation options for php-lean">
+                  <button class="tab-btn active" role="tab" aria-selected="true" data-cmd="composer require --dev stolt/php-lean">Dev Dependency</button>
+                  <button class="tab-btn" role="tab" aria-selected="false" data-cmd="composer global require stolt/php-lean">Global</button>
+                </div>
+                <div class="install-box">
+                  <code class="font-mono install-code" id="cmd-php-lean">composer require --dev stolt/php-lean</code>
+                  <button class="copy-btn" aria-label="Copy installation command" data-copy-target="cmd-php-lean">
+                    <svg class="icon icon-copy" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+                      <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25v-7.5z"/>
+                      <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25v-7.5zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25h-7.5z"/>
+                    </svg>
+                    <span class="copy-label">Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Rust: cargo-lean -->
+          <article class="project-card" id="project-rust" data-repo="cargo-lean">
+            <div class="project-card-header">
+              <div class="project-meta">
+                <span class="lang-badge lang-rust">Rust</span>
+                <span class="version-badge font-mono" id="version-cargo-lean" title="Latest version from GitHub API">
+                  <span class="v-text">v0.4.2</span>
+                  <span class="v-status" aria-hidden="true"></span>
+                </span>
+              </div>
+              <a href="https://github.com/lean-packages/cargo-lean" class="repo-link" target="_blank" rel="noopener noreferrer" aria-label="cargo-lean on GitHub">
+                <span class="repo-name">lean-packages/cargo-lean</span>
+                <svg class="icon icon-external" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">cargo-lean</h3>
+              <p class="project-description">
+                A Cargo subcommand for validating, auditing, and optimizing <code>Cargo.toml</code> package exclusion lists to prevent unnecessary files from inflating crates.io distribution tarballs.
+              </p>
+
+              <!-- Dynamic Install Tabs -->
+              <div class="install-container">
+                <div class="install-tabs" role="tablist" aria-label="Installation options for cargo-lean">
+                  <button class="tab-btn active" role="tab" aria-selected="true" data-cmd="cargo install cargo-lean">crates.io</button>
+                  <button class="tab-btn" role="tab" aria-selected="false" data-cmd="cargo install --git https://github.com/lean-packages/cargo-lean">Git Source</button>
+                </div>
+                <div class="install-box">
+                  <code class="font-mono install-code" id="cmd-cargo-lean">cargo install cargo-lean</code>
+                  <button class="copy-btn" aria-label="Copy installation command" data-copy-target="cmd-cargo-lean">
+                    <svg class="icon icon-copy" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+                      <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25v-7.5z"/>
+                      <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25v-7.5zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25h-7.5z"/>
+                    </svg>
+                    <span class="copy-label">Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Python: py-lean -->
+          <article class="project-card" id="project-python" data-repo="py-lean">
+            <div class="project-card-header">
+              <div class="project-meta">
+                <span class="lang-badge lang-python">Python</span>
+                <span class="version-badge font-mono" id="version-py-lean" title="Latest version from GitHub API">
+                  <span class="v-text">v0.2.5</span>
+                  <span class="v-status" aria-hidden="true"></span>
+                </span>
+              </div>
+              <a href="https://github.com/lean-packages/py-lean" class="repo-link" target="_blank" rel="noopener noreferrer" aria-label="py-lean on GitHub">
+                <span class="repo-name">lean-packages/py-lean</span>
+                <svg class="icon icon-external" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">py-lean</h3>
+              <p class="project-description">
+                A Python tool for detecting, configuring, and fixing missing <code>source-exclude</code> patterns in <code>pyproject.toml</code> to ensure repository-only files are omitted from source distributions.
+              </p>
+
+              <!-- Dynamic Install Tabs -->
+              <div class="install-container">
+                <div class="install-tabs" role="tablist" aria-label="Installation options for py-lean">
+                  <button class="tab-btn active" role="tab" aria-selected="true" data-cmd="uv tool install py-lean-package">uv (recommended)</button>
+                  <button class="tab-btn" role="tab" aria-selected="false" data-cmd="pip install py-lean-package">pip</button>
+                </div>
+                <div class="install-box">
+                  <code class="font-mono install-code" id="cmd-py-lean">uv tool install py-lean-package</code>
+                  <button class="copy-btn" aria-label="Copy installation command" data-copy-target="cmd-py-lean">
+                    <svg class="icon icon-copy" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+                      <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25v-7.5z"/>
+                      <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25v-7.5zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25h-7.5z"/>
+                    </svg>
+                    <span class="copy-label">Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- JavaScript / TypeScript: js-lean -->
+          <article class="project-card" id="project-javascript" data-repo="js-lean">
+            <div class="project-card-header">
+              <div class="project-meta">
+                <span class="lang-badge lang-js">JavaScript</span>
+                <span class="version-badge font-mono" id="version-js-lean" title="Latest version from GitHub API">
+                  <span class="v-text">v0.1.1</span>
+                  <span class="v-status" aria-hidden="true"></span>
+                </span>
+              </div>
+              <a href="https://github.com/lean-packages/js-lean" class="repo-link" target="_blank" rel="noopener noreferrer" aria-label="js-lean on GitHub">
+                <span class="repo-name">lean-packages/js-lean</span>
+                <svg class="icon icon-external" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">js-lean</h3>
+              <p class="project-description">
+                A CLI tool for validating and optimizing lean JavaScript &amp; TypeScript package distribution by checking <code>package.json</code> <code>files</code> allowlists and <code>.npmignore</code> files.
+              </p>
+
+              <!-- Dynamic Install Tabs -->
+              <div class="install-container">
+                <div class="install-tabs" role="tablist" aria-label="Installation options for js-lean">
+                  <button class="tab-btn active" role="tab" aria-selected="true" data-cmd="npm install -D js-lean">npm dev</button>
+                  <button class="tab-btn" role="tab" aria-selected="false" data-cmd="npx js-lean lint">npx (direct run)</button>
+                  <button class="tab-btn" role="tab" aria-selected="false" data-cmd="pnpm add -D js-lean">pnpm</button>
+                </div>
+                <div class="install-box">
+                  <code class="font-mono install-code" id="cmd-js-lean">npm install -D js-lean</code>
+                  <button class="copy-btn" aria-label="Copy installation command" data-copy-target="cmd-js-lean">
+                    <svg class="icon icon-copy" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+                      <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25v-7.5z"/>
+                      <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25v-7.5zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25h-7.5z"/>
+                    </svg>
+                    <span class="copy-label">Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Companion Utilities Note -->
+        <div class="companion-tools">
+          <div class="companion-header">
+            <h4 class="companion-title">Companion Tools &amp; Utilities</h4>
+            <p class="companion-desc">Additional focused tools within the lean-packages organization:</p>
+          </div>
+          <div class="companion-grid">
+            <a href="https://github.com/lean-packages/composer-peel" class="companion-card" target="_blank" rel="noopener noreferrer">
+              <div class="companion-card-header">
+                <span class="lang-badge lang-php">PHP</span>
+                <span class="companion-name font-mono">composer-peel</span>
+              </div>
+              <div class="companion-text">Strip development-only metadata from composer.json before release.</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contribution / Callout Section -->
+    <section class="section join-section">
+      <div class="container">
+        <div class="callout-card">
+          <div class="callout-content">
+            <h2 class="callout-title">Ship lean software everywhere</h2>
+            <p class="callout-desc">
+              All tools in the <strong>lean-packages</strong> family are open-source under the MIT license. We welcome contributors, language toolchain suggestions, and feedback on distribution packaging.
+            </p>
+          </div>
+          <div class="callout-actions">
+            <a href="https://github.com/lean-packages" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              <span>Join on GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <img src="assets/logo.png" alt="lean-packages logo" class="footer-logo" width="24" height="24">
+          <span class="footer-org">lean-packages</span>
+        </div>
+        <p class="footer-tagline">Open-source developer tools for lean distribution archives.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title">Ecosystem</div>
+          <ul class="footer-list">
+            <li><a href="https://github.com/lean-packages/php-lean" target="_blank" rel="noopener noreferrer">php-lean</a></li>
+            <li><a href="https://github.com/lean-packages/cargo-lean" target="_blank" rel="noopener noreferrer">cargo-lean</a></li>
+            <li><a href="https://github.com/lean-packages/py-lean" target="_blank" rel="noopener noreferrer">py-lean</a></li>
+            <li><a href="https://github.com/lean-packages/js-lean" target="_blank" rel="noopener noreferrer">js-lean</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Organization</div>
+          <ul class="footer-list">
+            <li><a href="https://github.com/lean-packages" target="_blank" rel="noopener noreferrer">GitHub Organization</a></li>
+            <li><a href="https://github.com/orgs/lean-packages/repositories" target="_blank" rel="noopener noreferrer">All Repositories</a></li>
+            <li><a href="#philosophy">Packaging Philosophy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="footer-copy">
+        &copy; <span id="current-year">2026</span> <a href="https://github.com/lean-packages" target="_blank" rel="noopener noreferrer">lean-packages</a>. Released under the MIT License.
+      </p>
+      <p class="footer-credit font-mono">
+        Designed for speed, accessibility &amp; zero bloat.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Notification Toast for Copy Actions -->
+  <div id="toast" class="toast" role="status" aria-live="polite">Command copied to clipboard</div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
