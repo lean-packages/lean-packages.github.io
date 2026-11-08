@@ -330,12 +330,34 @@ code {
   box-shadow: 0 0 8px var(--accent-green);
 }
 
+.hero-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
 .hero-title {
   font-size: 3.25rem;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
+}
+
+.hero-janitor {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-janitor-img {
+  width: auto;
+  max-width: 105px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
 }
 
 .gradient-text {
@@ -1005,6 +1027,10 @@ code {
     font-size: 2.5rem;
   }
 
+  .hero-janitor-img {
+    max-width: 85px;
+  }
+
   .projects-list {
     grid-template-columns: 1fr;
   }
@@ -1024,8 +1050,16 @@ code {
     display: none;
   }
 
+  .hero-title-wrapper {
+    gap: 1rem;
+  }
+
   .hero-title {
     font-size: 2rem;
+  }
+
+  .hero-janitor-img {
+    max-width: 68px;
   }
 
   .section {
