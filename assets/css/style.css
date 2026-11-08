@@ -200,7 +200,8 @@ code {
   text-decoration: none;
 }
 
-.github-btn {
+.github-btn,
+.devnull-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -211,7 +212,8 @@ code {
   color: var(--text-primary);
 }
 
-.github-btn:hover {
+.github-btn:hover,
+.devnull-btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: var(--text-muted);
 }
@@ -1015,10 +1017,10 @@ code {
 
 @media (max-width: 640px) {
   .site-header .nav-list {
-    gap: 1rem;
+    gap: 0.75rem;
   }
   
-  .nav-link:not(.github-btn) {
+  .nav-link:not(.github-btn):not(.devnull-btn) {
     display: none;
   }
 

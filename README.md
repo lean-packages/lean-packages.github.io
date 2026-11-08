@@ -1,6 +1,6 @@
 # lean-packages.github.io
 
-Official website and landing page for the **lean-packages** GitHub organization ([https://github.com/lean-packages](https://github.com/lean-packages)).
+Official website and landing page for the **lean-packages** GitHub organization ([https://github.com/lean-packages](https://github.com/lean-packages) | [/dev/null](https://dev-null.sh/@lean-packages)).
 
 ## About
 
