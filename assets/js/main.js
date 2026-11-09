@@ -6,12 +6,75 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initMobileNav();
   initVersionFetcher();
   initTerminalTabs();
   initInstallTabs();
   initCopyButtons();
   initYear();
 });
+
+/**
+ * Handle mobile navigation drawer toggle and interaction
+ */
+function initMobileNav() {
+  const toggleBtn = document.getElementById('nav-toggle');
+  const drawer = document.getElementById('mobile-nav-drawer');
+  if (!toggleBtn || !drawer) return;
+
+  const links = drawer.querySelectorAll('.mobile-nav-link');
+
+  const closeMenu = () => {
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    toggleBtn.classList.remove('is-active');
+    drawer.setAttribute('hidden', '');
+  };
+
+  const openMenu = () => {
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    toggleBtn.classList.add('is-active');
+    drawer.removeAttribute('hidden');
+  };
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    if (isExpanded) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Close when clicking any navigation link
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+
+  // Close when clicking outside header & drawer
+  document.addEventListener('click', (e) => {
+    if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && !toggleBtn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Close on Escape key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !drawer.hasAttribute('hidden')) {
+      closeMenu();
+      toggleBtn.focus();
+    }
+  });
+
+  // Close if window is resized above mobile breakpoint (768px)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && !drawer.hasAttribute('hidden')) {
+      closeMenu();
+    }
+  });
+}
 
 /**
  * Handle tab switching for hero terminal demonstrations across languages
