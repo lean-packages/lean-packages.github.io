@@ -343,6 +343,7 @@ code {
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin-bottom: 0;
+  white-space: nowrap;
 }
 
 .hero-janitor {
@@ -398,15 +399,19 @@ code {
 .terminal-header {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
   background-color: #0e131b;
   padding: 0.65rem 1rem;
   border-bottom: 1px solid var(--border-subtle);
   position: relative;
+  flex-wrap: wrap;
 }
 
 .terminal-dots {
   display: flex;
   gap: 6px;
+  flex-shrink: 0;
 }
 
 .dot {
@@ -419,15 +424,113 @@ code {
 .dot-yellow { background-color: #ffbd2e; }
 .dot-green { background-color: #27c93f; }
 
-.terminal-title {
-  position: absolute;
-  left: 0;
-  right: 0;
-  text-align: center;
+.terminal-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.terminal-tab {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
   font-family: var(--font-mono);
   font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.terminal-tab:hover {
+  color: var(--text-primary);
+  border-color: var(--border-muted);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.terminal-tab.active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Language-specific colors matching Ecosystem theme */
+.terminal-tab[data-term-target="term-php"]:hover {
+  color: var(--lang-php);
+  border-color: rgba(162, 155, 254, 0.3);
+  background-color: rgba(162, 155, 254, 0.08);
+}
+
+.terminal-tab[data-term-target="term-php"].active {
+  color: var(--lang-php);
+  background-color: var(--lang-php-bg);
+  border-color: rgba(162, 155, 254, 0.4);
+}
+
+.terminal-tab[data-term-target="term-rust"]:hover {
+  color: var(--lang-rust);
+  border-color: rgba(243, 156, 18, 0.3);
+  background-color: rgba(243, 156, 18, 0.08);
+}
+
+.terminal-tab[data-term-target="term-rust"].active {
+  color: var(--lang-rust);
+  background-color: var(--lang-rust-bg);
+  border-color: rgba(243, 156, 18, 0.4);
+}
+
+.terminal-tab[data-term-target="term-python"]:hover {
+  color: var(--lang-python);
+  border-color: rgba(96, 165, 250, 0.3);
+  background-color: rgba(96, 165, 250, 0.08);
+}
+
+.terminal-tab[data-term-target="term-python"].active {
+  color: var(--lang-python);
+  background-color: var(--lang-python-bg);
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+.terminal-tab[data-term-target="term-javascript"]:hover {
+  color: var(--lang-js);
+  border-color: rgba(250, 204, 21, 0.3);
+  background-color: rgba(250, 204, 21, 0.08);
+}
+
+.terminal-tab[data-term-target="term-javascript"].active {
+  color: var(--lang-js);
+  background-color: var(--lang-js-bg);
+  border-color: rgba(250, 204, 21, 0.4);
+}
+
+.terminal-panel {
+  display: none;
+}
+
+.terminal-panel.active {
+  display: block;
+}
+
+.terminal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #0e131b;
+  padding: 0.5rem 1.25rem 0.6rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.terminal-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
   color: var(--text-muted);
-  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
 }
 
 .terminal-body {

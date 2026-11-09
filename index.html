@@ -105,10 +105,32 @@
                 <span class="dot dot-yellow"></span>
                 <span class="dot dot-green"></span>
               </div>
-              <div class="terminal-title"></div>
+              <div class="terminal-tabs" role="tablist" aria-label="Terminal tool demonstration">
+                <button class="terminal-tab active" role="tab" aria-selected="true" data-term-target="term-php">PHP</button>
+                <button class="terminal-tab" role="tab" aria-selected="false" data-term-target="term-rust">Rust</button>
+                <button class="terminal-tab" role="tab" aria-selected="false" data-term-target="term-python">Python</button>
+                <button class="terminal-tab" role="tab" aria-selected="false" data-term-target="term-javascript">JavaScript</button>
+              </div>
             </div>
-            <div class="terminal-body font-mono">
-              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cargo lean</span> <span class="t-flag">--dry-run</span></div>
+
+            <!-- PHP Demo (Default) -->
+            <div class="terminal-body font-mono terminal-panel active" id="term-php" role="tabpanel" aria-label="PHP php-lean demonstration">
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">vendor/bin/php-lean lint</span> <span class="t-flag">--dry-run</span></div>
+              <div class="terminal-output t-muted">Scanning repository against .gitattributes export-ignore rules...</div>
+              <div class="terminal-line t-warn">Found 4 non-runtime items missing export-ignore:</div>
+              <div class="terminal-diff">
+                <div class="diff-item diff-remove">- tests/</div>
+                <div class="diff-item diff-remove">- phpunit.xml</div>
+                <div class="diff-item diff-remove">- .github/</div>
+                <div class="diff-item diff-remove">- phpstan.neon</div>
+              </div>
+              <div class="terminal-line t-success"><span class="t-indicator">✓</span> Package archive size reduced: <span class="t-stat">2.1 MB → 180 KB (-91.4%)</span></div>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor">_</span></div>
+            </div>
+
+            <!-- Rust Demo -->
+            <div class="terminal-body font-mono terminal-panel" id="term-rust" role="tabpanel" aria-label="Rust cargo-lean demonstration" hidden>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cargo-lean lint</span> <span class="t-flag">--dry-run</span></div>
               <div class="terminal-output t-muted">Scanning repository for unexcluded development artifacts...</div>
               <div class="terminal-line t-warn">Found 4 non-runtime items missing from the [package].exclude list:</div>
               <div class="terminal-diff">
@@ -119,6 +141,40 @@
               </div>
               <div class="terminal-line t-success"><span class="t-indicator">✓</span> Package archive size reduced: <span class="t-stat">1.4 MB → 142 KB (-89.8%)</span></div>
               <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor">_</span></div>
+            </div>
+
+            <!-- Python Demo -->
+            <div class="terminal-body font-mono terminal-panel" id="term-python" role="tabpanel" aria-label="Python py-lean demonstration" hidden>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">py-lean lint</span> <span class="t-flag">--dry-run</span></div>
+              <div class="terminal-output t-muted">Scanning pyproject.toml source-exclude patterns and build tree...</div>
+              <div class="terminal-line t-warn">Found 4 non-runtime items missing from source-exclude:</div>
+              <div class="terminal-diff">
+                <div class="diff-item diff-remove">- tests/</div>
+                <div class="diff-item diff-remove">- docs/</div>
+                <div class="diff-item diff-remove">- .pre-commit-config.yaml</div>
+                <div class="diff-item diff-remove">- tox.ini</div>
+              </div>
+              <div class="terminal-line t-success"><span class="t-indicator">✓</span> Package archive size reduced: <span class="t-stat">890 KB → 94 KB (-89.4%)</span></div>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor">_</span></div>
+            </div>
+
+            <!-- JavaScript Demo -->
+            <div class="terminal-body font-mono terminal-panel" id="term-javascript" role="tabpanel" aria-label="JavaScript js-lean demonstration" hidden>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">npx js-lean lint</span> <span class="t-flag">--dry-run</span></div>
+              <div class="terminal-output t-muted">Analyzing package.json files allowlist and .npmignore rules...</div>
+              <div class="terminal-line t-warn">Found 4 non-runtime items unexcluded from npm pack:</div>
+              <div class="terminal-diff">
+                <div class="diff-item diff-remove">- tsconfig.json</div>
+                <div class="diff-item diff-remove">- src/__tests__/</div>
+                <div class="diff-item diff-remove">- .eslintrc.json</div>
+                <div class="diff-item diff-remove">- vitest.config.ts</div>
+              </div>
+              <div class="terminal-line t-success"><span class="t-indicator">✓</span> Package archive size reduced: <span class="t-stat">3.2 MB → 210 KB (-93.4%)</span></div>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor">_</span></div>
+            </div>
+
+            <div class="terminal-footer">
+              <span class="terminal-label">Illustrative examples</span>
             </div>
           </div>
         </div>

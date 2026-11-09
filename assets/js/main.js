@@ -7,10 +7,47 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initVersionFetcher();
+  initTerminalTabs();
   initInstallTabs();
   initCopyButtons();
   initYear();
 });
+
+/**
+ * Handle tab switching for hero terminal demonstrations across languages
+ */
+function initTerminalTabs() {
+  const terminalTabs = document.querySelectorAll('.terminal-tab');
+  const terminalPanels = document.querySelectorAll('.terminal-panel');
+
+  if (!terminalTabs.length || !terminalPanels.length) return;
+
+  terminalTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('data-term-target');
+      if (!targetId) return;
+
+      // Update active states on tab buttons
+      terminalTabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+
+      // Display corresponding terminal panel
+      terminalPanels.forEach(panel => {
+        if (panel.id === targetId) {
+          panel.classList.add('active');
+          panel.removeAttribute('hidden');
+        } else {
+          panel.classList.remove('active');
+          panel.setAttribute('hidden', '');
+        }
+      });
+    });
+  });
+}
 
 /**
  * Fetch latest version tags from GitHub API for each repository.
