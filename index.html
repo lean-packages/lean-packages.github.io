@@ -38,6 +38,7 @@
           <li><a href="#how-it-works" class="nav-link">How it works</a></li>
           <li><a href="#philosophy" class="nav-link">Our philosophy</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
           <li>
             <a href="https://dev-null.sh/@lean-packages" class="nav-link devnull-btn" target="_blank" rel="noopener noreferrer" aria-label="/dev/null">
               <svg class="icon icon-devnull" viewBox="1.6 1.5 45 45" width="16" height="16" aria-hidden="true">
@@ -607,6 +608,66 @@
       </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">FAQ</div>
+          <h2 class="section-title">Frequently asked questions</h2>
+          <p class="section-subtitle">
+            Essential answers about lean packaging, archive optimization, non-destructive workflows, and CI integration.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-question">What is a lean distribution archive?</h3>
+            <div class="faq-answer">
+              <p>
+                A lean distribution archive contains only the runtime code, build assets, metadata, and license files strictly necessary for your package to function in consumer projects or production environments. It excludes test suites, CI workflows, code quality configurations, benchmarks, developer scripts, and documentation that inflate package downloads, bandwidth costs, and node storage.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Do these tools delete files from my repository?</h3>
+            <div class="faq-answer">
+              <p>
+                No. All <code>lean-packages</code> tools operate entirely non-destructively. They never delete, modify, or remove files from your local working tree or git history. Instead, they inspect your repository and manage standard packaging exclusion manifests (such as <code>.gitattributes</code>, <code>Cargo.toml</code>, <code>pyproject.toml</code>, or <code>package.json</code>) so that development files remain in git but are omitted from distribution releases.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Does every language use the same exclusion mechanism?</h3>
+            <div class="faq-answer">
+              <p>
+                No. Each tool adheres strictly to its ecosystem's native packaging standards. For example, PHP relies on <code>.gitattributes</code> <code>export-ignore</code> attributes for Composer packages, Rust uses the <code>[package].exclude</code> manifest list in <code>Cargo.toml</code>, Python utilizes <code>MANIFEST.in</code> or modern pyproject build backend rules, and JavaScript uses the <code>package.json</code> <code>files</code> allowlist or <code>.npmignore</code>.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Can I integrate lean-packages into CI/CD?</h3>
+            <div class="faq-answer">
+              <p>
+                Yes. Every CLI tool provides a linting or verification command that returns non-zero exit codes when unexcluded development artifacts or misconfigured packaging manifests are detected. You can easily integrate them into GitHub Actions, GitLab CI, or pre-release release scripts to automatically prevent package bloat from reaching registries.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">How can I contribute for a yet unsupported language/ecosystem?</h3>
+            <div class="faq-answer">
+              <p>
+                We welcome community collaboration! You can open an issue or pull request in our <a href="https://github.com/lean-packages" target="_blank" rel="noopener noreferrer">GitHub organization</a> proposing a new ecosystem tool, sharing packaging specifications, or helping expand file pattern rules and test suites across existing projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contribution / Callout Section -->
     <section class="section join-section">
       <div class="container">
@@ -654,6 +715,7 @@
         <div class="footer-col">
           <div class="footer-col-title">Organization</div>
           <ul class="footer-list">
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="https://github.com/lean-packages" target="_blank" rel="noopener noreferrer">GitHub Organization</a></li>
           </ul>
         </div>
