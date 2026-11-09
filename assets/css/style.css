@@ -1133,81 +1133,11 @@ code {
 .site-footer {
   background-color: #06090e;
   border-top: 1px solid var(--border-subtle);
-  padding: 4rem 0 2rem;
+  padding: 2.5rem 0;
   margin-top: auto;
 }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-}
-
-.footer-brand {
-  max-width: 340px;
-}
-
-.footer-logo-row {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 0.75rem;
-}
-
-.footer-logo {
-  border-radius: 4px;
-}
-
-.footer-org {
-  font-family: var(--font-mono);
-  font-size: 1.0625rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.footer-tagline {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-.footer-links {
-  display: flex;
-  gap: 4rem;
-  flex-wrap: wrap;
-}
-
-.footer-col-title {
-  font-size: 0.75rem;
-  font-family: var(--font-mono);
-  font-weight: 700;
-  color: var(--text-primary);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 1rem;
-}
-
-.footer-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.footer-list a {
-  color: var(--text-secondary);
-  font-size: 0.875rem;
-}
-
-.footer-list a:hover {
-  color: var(--text-primary);
-}
-
 .footer-bottom {
-  border-top: 1px solid var(--border-subtle);
-  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1320,10 +1250,6 @@ code {
 
   .faq-item {
     padding: 1.25rem 1.5rem;
-  }
-
-  .footer-links {
-    gap: 2rem;
   }
 
   .footer-bottom {
