@@ -681,6 +681,77 @@ code {
   margin-top: auto;
 }
 
+/* How It Works Section */
+.workflow-flow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+}
+
+.workflow-step {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.75rem 2rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.workflow-step:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--border-muted);
+  transform: translateY(-2px);
+}
+
+.workflow-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(88, 166, 255, 0.08);
+  border: 1px solid rgba(88, 166, 255, 0.25);
+  border-radius: var(--radius-sm);
+  color: var(--accent-blue);
+}
+
+.workflow-content {
+  flex-grow: 1;
+}
+
+.workflow-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.workflow-desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+.workflow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0;
+  color: var(--accent-blue);
+  opacity: 0.75;
+}
+
+.workflow-arrow svg {
+  display: block;
+}
+
 /* Philosophy Section */
 .philosophy-grid {
   display: grid;
@@ -1171,6 +1242,16 @@ code {
 
   .section-title {
     font-size: 1.5rem;
+  }
+
+  .workflow-step {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .workflow-icon {
+    width: 40px;
+    height: 40px;
   }
 
   .footer-links {
