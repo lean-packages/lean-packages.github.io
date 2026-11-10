@@ -138,7 +138,7 @@
 
             <!-- PHP Demo (Default) -->
             <div class="terminal-body font-mono terminal-panel active" id="term-php" role="tabpanel" aria-label="PHP php-lean demonstration">
-              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">vendor/bin/php-lean lint</span> <span class="t-flag">--dry-run</span></div>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">vendor/bin/php-lean lint</span> <span class="t-flag">--diff</span></div>
               <div class="terminal-output t-muted">Scanning repository against .gitattributes export-ignore rules...</div>
               <div class="terminal-line t-warn">Found 4 non-runtime items missing export-ignore:</div>
               <div class="terminal-diff">
@@ -153,7 +153,7 @@
 
             <!-- Rust Demo -->
             <div class="terminal-body font-mono terminal-panel" id="term-rust" role="tabpanel" aria-label="Rust cargo-lean demonstration" hidden>
-              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cargo-lean lint</span> <span class="t-flag">--dry-run</span></div>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cargo-lean lint</span> <span class="t-flag">--diff</span></div>
               <div class="terminal-output t-muted">Scanning repository for unexcluded development artifacts...</div>
               <div class="terminal-line t-warn">Found 4 non-runtime items missing from the [package].exclude list:</div>
               <div class="terminal-diff">
@@ -168,7 +168,7 @@
 
             <!-- Python Demo -->
             <div class="terminal-body font-mono terminal-panel" id="term-python" role="tabpanel" aria-label="Python py-lean demonstration" hidden>
-              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">py-lean lint</span> <span class="t-flag">--dry-run</span></div>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">py-lean lint</span> <span class="t-flag">--diff</span></div>
               <div class="terminal-output t-muted">Scanning pyproject.toml source-exclude patterns and build tree...</div>
               <div class="terminal-line t-warn">Found 4 non-runtime items missing from source-exclude:</div>
               <div class="terminal-diff">
@@ -183,7 +183,7 @@
 
             <!-- JavaScript Demo -->
             <div class="terminal-body font-mono terminal-panel" id="term-javascript" role="tabpanel" aria-label="JavaScript js-lean demonstration" hidden>
-              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">npx js-lean lint</span> <span class="t-flag">--dry-run</span></div>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">npx js-lean lint</span> <span class="t-flag">--diff</span></div>
               <div class="terminal-output t-muted">Analyzing package.json files allowlist and .npmignore rules...</div>
               <div class="terminal-line t-warn">Found 4 non-runtime items unexcluded from npm pack:</div>
               <div class="terminal-diff">
