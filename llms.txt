@@ -1,0 +1,79 @@
+# lean-packages
+
+> lean-packages is an open-source ecosystem of developer tools for creating, validating, and maintaining lean software distribution archives. Its tools identify development-only files and ensure they are excluded from published packages using each programming language's native packaging conventions.
+
+## About
+
+lean-packages helps developers ship smaller, cleaner software packages without removing development files from their source repositories.
+
+The ecosystem focuses on reducing unnecessary distribution archive contents, download sizes, bandwidth consumption, and exposure of internal development artifacts.
+
+The central principle is simple:
+
+Keep development files in your repository. Exclude them from your published distributions.
+
+All tools follow their respective ecosystem's native packaging conventions rather than introducing a universal exclusion format.
+
+## How it works
+
+The lean packaging workflow consists of three steps:
+
+1. Inspect: Detect development-only files and artifacts in a repository.
+2. Configure: Create, validate, or update the native packaging exclusion configuration.
+3. Ship: Publish a leaner distribution archive while keeping the development repository intact.
+
+The tools are designed to operate non-destructively. They manage packaging configuration rather than deleting source files or rewriting Git history.
+
+## Supported ecosystems
+
+- PHP: `.gitattributes` `export-ignore` attributes for Composer distribution archives.
+- Rust: `[package].exclude` in `Cargo.toml` for Cargo packages.
+- Python: Native source distribution exclusion mechanisms, including modern `pyproject.toml` build backend configuration.
+- JavaScript and TypeScript: npm's `files` allowlist in `package.json` and `.npmignore` rules.
+
+## Projects
+
+### PHP
+
+- [php-lean](https://github.com/lean-packages/php-lean): A PHP library and CLI for validating and managing `.gitattributes` `export-ignore` rules to keep Composer distribution archives lean.
+
+### Rust
+
+- [cargo-lean](https://github.com/lean-packages/cargo-lean): A Cargo subcommand for validating, auditing, and managing package exclusion lists in `Cargo.toml`.
+
+### Python
+
+- [py-lean](https://github.com/lean-packages/py-lean): A Python tool for detecting, configuring, and fixing missing source exclusion patterns in package build configuration.
+
+### JavaScript and TypeScript
+
+- [js-lean](https://github.com/lean-packages/js-lean): A CLI tool for validating and optimizing npm package distribution contents using `package.json` files allowlists and `.npmignore` rules.
+
+## Companion tools
+
+- [composer-peel](https://github.com/lean-packages/composer-peel): A PHP development tool for stripping development-only metadata from `composer.json` release manifests.
+
+## Guiding principles
+
+- Smaller distribution archives: Reduce unnecessary files, downloads, and storage consumption.
+- Explicit exclusions: Make packaging decisions transparent and maintainable.
+- Language-native tooling: Respect existing package manager conventions.
+- Non-destructive workflows: Keep development files and Git history intact.
+- Open source: All ecosystem tools are released under the MIT license.
+
+## Integration
+
+The tools provide linting or verification commands suitable for continuous integration and release workflows.
+
+They can be integrated into GitHub Actions, GitLab CI, and other automated development pipelines.
+
+## Contributing
+
+The ecosystem welcomes contributions, new language integrations, packaging specifications, improvements to existing tools, and community feedback.
+
+- [GitHub organization](https://github.com/lean-packages)
+- [lean-packages website](https://lean-packages.github.io/)
+
+## Documentation
+
+For installation instructions, command references, configuration options, examples, and project-specific details, consult the README and documentation in each project's repository.
