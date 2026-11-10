@@ -968,6 +968,12 @@ code {
   text-decoration: none;
 }
 
+.project-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .project-title {
   font-size: 1.35rem;
   font-weight: 700;
@@ -986,6 +992,7 @@ code {
 
 /* Install Box & Tabs */
 .install-container {
+  margin-top: auto;
   background-color: var(--bg-input);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
@@ -994,6 +1001,7 @@ code {
 
 .install-tabs {
   display: flex;
+  flex-wrap: wrap;
   background-color: #0b1017;
   border-bottom: 1px solid var(--border-subtle);
   padding: 0.25rem 0.25rem 0;
@@ -1037,21 +1045,23 @@ code {
   color: #e2e8f0;
   background: none;
   padding: 0;
-  white-space: nowrap;
-  overflow-x: auto;
-  scrollbar-width: thin;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .copy-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-muted);
   color: var(--text-secondary);
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  padding: 0.3rem 0.6rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
   flex-shrink: 0;
@@ -1064,10 +1074,22 @@ code {
   border-color: var(--text-muted);
 }
 
+.copy-btn .icon-check {
+  display: none;
+}
+
 .copy-btn.copied {
   background-color: var(--accent-green-bg);
   border-color: var(--accent-green);
   color: var(--accent-green);
+}
+
+.copy-btn.copied .icon-copy {
+  display: none;
+}
+
+.copy-btn.copied .icon-check {
+  display: block;
 }
 
 /* Companion Tools */
@@ -1526,8 +1548,11 @@ code {
   }
 
   .copy-btn {
-    font-size: 0.7rem;
-    padding: 0.25rem 0.5rem;
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    min-height: 26px;
+    padding: 0;
   }
 
   .faq-item {

@@ -235,10 +235,8 @@ function initCopyButtons() {
         }
 
         // Button feedback
-        const label = btn.querySelector('.copy-label');
-        const originalLabel = label ? label.textContent : 'Copy';
         btn.classList.add('copied');
-        if (label) label.textContent = 'Copied!';
+        btn.setAttribute('aria-label', 'Copied to clipboard');
 
         // Toast notification
         if (toast) {
@@ -252,7 +250,7 @@ function initCopyButtons() {
 
         setTimeout(() => {
           btn.classList.remove('copied');
-          if (label) label.textContent = originalLabel;
+          btn.setAttribute('aria-label', 'Copy installation command');
         }, 2000);
       } catch (err) {
         console.error('Failed to copy text: ', err);
