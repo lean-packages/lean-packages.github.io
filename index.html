@@ -662,7 +662,7 @@
             <h3 class="faq-question">Do these tools delete files from my repository?</h3>
             <div class="faq-answer">
               <p>
-                No. All <code>lean-packages</code> tools operate entirely non-destructively. They never delete, modify, or remove files from your local working tree or git history. Instead, they inspect your repository and manage standard packaging exclusion manifests (such as <code>.gitattributes</code>, <code>Cargo.toml</code>, <code>pyproject.toml</code>, or <code>package.json</code>) so that development files remain in git but are omitted from distribution releases.
+                No. lean-packages tools never delete your source files or rewrite your Git history. They may create or update the relevant packaging configuration files to control which files are included in published distributions. Your development files remain available in your repository.
               </p>
             </div>
           </div>
@@ -671,8 +671,26 @@
             <h3 class="faq-question">Does every language use the same exclusion mechanism?</h3>
             <div class="faq-answer">
               <p>
-                No. Each tool adheres strictly to its ecosystem's native packaging standards. For example, PHP relies on <code>.gitattributes</code> <code>export-ignore</code> attributes for Composer packages, Rust uses the <code>[package].exclude</code> manifest list in <code>Cargo.toml</code>, Python utilizes <code>MANIFEST.in</code> or modern pyproject build backend rules, and JavaScript uses the <code>package.json</code> <code>files</code> allowlist or <code>.npmignore</code>.
+                No. Each tool follows its ecosystem's native packaging conventions rather than introducing a universal exclusion format:
               </p>
+              <ul class="faq-lang-list">
+                <li class="faq-lang-item">
+                  <span class="lang-badge lang-php">PHP</span>
+                  <span class="faq-lang-desc">Uses Git's <code>.gitattributes</code> <code>export-ignore</code> attribute to exclude files from Composer distribution archives.</span>
+                </li>
+                <li class="faq-lang-item">
+                  <span class="lang-badge lang-rust">Rust</span>
+                  <span class="faq-lang-desc">Uses the <code>[package].exclude</code> field in <code>Cargo.toml</code> to exclude files from published Cargo packages.</span>
+                </li>
+                <li class="faq-lang-item">
+                  <span class="lang-badge lang-python">Python</span>
+                  <span class="faq-lang-desc">Uses the uv_build backend's <code>source-exclude</code> and <code>wheel-exclude</code> settings in <code>pyproject.toml</code>.</span>
+                </li>
+                <li class="faq-lang-item">
+                  <span class="lang-badge lang-js">JavaScript</span>
+                  <span class="faq-lang-desc">Uses npm's <code>files</code> allowlist in <code>package.json</code> or <code>.npmignore</code> rules to control which files are included in published packages.</span>
+                </li>
+              </ul>
             </div>
           </div>
 
