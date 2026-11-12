@@ -30,6 +30,7 @@ The tools are designed to operate non-destructively. They manage packaging confi
 - Rust: `[package].exclude` in `Cargo.toml` for Cargo packages.
 - Python: Native source distribution exclusion mechanisms, including modern `pyproject.toml` build backend configuration.
 - JavaScript and TypeScript: npm's `files` allowlist in `package.json` and `.npmignore` rules.
+- Zig: `.paths` allowlist in `build.zig.zon` for Zig package manager archives.
 
 ## Projects
 
@@ -48,6 +49,10 @@ The tools are designed to operate non-destructively. They manage packaging confi
 ### JavaScript and TypeScript
 
 - [js-lean](https://github.com/lean-packages/js-lean): A CLI tool for validating and optimizing npm package distribution contents using `package.json` files allowlists and `.npmignore` rules.
+
+### Zig
+
+- [zig-lean](https://github.com/lean-packages/zig-lean): A CLI tool and library for validating, auditing, and optimizing `build.zig.zon` `.paths` allowlists to prevent repository-only files from inflating published Zig package archives.
 
 ## Companion tools
 

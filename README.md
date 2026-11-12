@@ -4,7 +4,7 @@ Official website and landing page for the **lean-packages** GitHub organization 
 
 ## About
 
-`lean-packages` is a collection of open-source developer tools helping software authors ship leaner distribution archives across multiple programming languages (PHP, Rust, Python, JavaScript/TypeScript).
+`lean-packages` is a collection of open-source developer tools helping software authors ship leaner distribution archives across multiple programming languages (PHP, Rust, Python, JavaScript/TypeScript, Zig).
 
 ## Ecosystem Projects
 
@@ -12,6 +12,7 @@ Official website and landing page for the **lean-packages** GitHub organization 
 - **[cargo-lean](https://github.com/lean-packages/cargo-lean)** — Validates and manages `Cargo.toml` `[package].exclude` lists for Rust crates.
 - **[py-lean](https://github.com/lean-packages/py-lean)** — Detects and fixes missing `source-exclude` patterns in `pyproject.toml` for Python packages.
 - **[js-lean](https://github.com/lean-packages/js-lean)** — Audits and enforces lean packaging rules (`package.json` `files` and `.npmignore`) for npm packages.
+- **[zig-lean](https://github.com/lean-packages/zig-lean)** — Audits and optimizes `build.zig.zon` `.paths` allowlists for Zig packages.
 
 ## Tech Stack & Architecture
 
