@@ -14,6 +14,7 @@ Official website and landing page for the **lean-packages** GitHub organization 
 - **[ruby-lean](https://github.com/lean-packages/ruby-lean)** — Audits `.gemspec` declared file lists and validates `.gem` archives for Ruby gems.
 - **[js-lean](https://github.com/lean-packages/js-lean)** — Audits and enforces lean packaging rules (`package.json` `files` and `.npmignore`) for npm packages.
 - **[zig-lean](https://github.com/lean-packages/zig-lean)** — Audits and optimizes `build.zig.zon` `.paths` allowlists for Zig packages.
+- **[action](https://github.com/lean-packages/action)** — Unified GitHub Action for automated lean package linting across all ecosystems.
 
 ## Tech Stack & Architecture
 

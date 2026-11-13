@@ -1238,6 +1238,207 @@ code {
   line-height: 1.45;
 }
 
+/* GitHub Action Section */
+.action-section {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.action-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-muted);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  transition: border-color var(--transition-fast);
+}
+
+.action-card:hover {
+  border-color: #3b4d63;
+}
+
+.action-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.action-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.action-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.action-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+
+.action-description {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+.action-description .lang-badge {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 0.72rem;
+  padding: 0.15rem 0.45rem;
+  margin: 0 0.15rem;
+  line-height: 1;
+}
+
+.action-workflow-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.action-workflow-container .install-box {
+  align-items: flex-start;
+  min-height: 230px;
+}
+
+.action-workflow-container .install-code {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+.action-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.action-feature-item {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  transition: all var(--transition-fast);
+}
+
+.action-feature-item:hover {
+  border-color: var(--border-muted);
+  background-color: var(--bg-card-hover);
+}
+
+.action-feature-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.action-feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+
+.action-feature-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.action-feature-desc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.action-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2rem;
+}
+
+.action-table-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.action-table-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.action-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  text-align: left;
+}
+
+.action-table th {
+  padding: 0.5rem 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.action-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.action-table tr:last-child td {
+  border-bottom: none;
+}
+
+.action-table code {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-blue);
+  background-color: rgba(88, 166, 255, 0.08);
+  padding: 0.1rem 0.35rem;
+  border-radius: var(--radius-sm);
+}
+
+.action-table .badge-req {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
 /* FAQ Section */
 .faq-section {
   padding: 5rem 0;
@@ -1443,6 +1644,14 @@ code {
     grid-template-columns: 1fr;
   }
 
+  .action-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .action-details-grid {
+    grid-template-columns: 1fr;
+  }
+
   .callout-card {
     flex-direction: column;
     align-items: flex-start;
@@ -1546,6 +1755,10 @@ code {
   }
 
   .project-card {
+    padding: 1.25rem;
+  }
+
+  .action-card {
     padding: 1.25rem;
   }
 

@@ -59,6 +59,10 @@ The tools are designed to operate non-destructively. They manage packaging confi
 
 - [zig-lean](https://github.com/lean-packages/zig-lean): A CLI tool and library for validating, auditing, and optimizing `build.zig.zon` `.paths` allowlists to prevent repository-only files from inflating published Zig package archives.
 
+### GitHub Actions & CI/CD
+
+- [action](https://github.com/lean-packages/action): A unified, zero-configuration GitHub Action (`lean-packages/action@v1`) that auto-detects packaging manifests across all supported ecosystems (PHP, Ruby, Rust, Python, JavaScript/TypeScript, Zig), provisions native tooling, and validates package distribution archives in CI.
+
 ## Companion tools
 
 - [composer-peel](https://github.com/lean-packages/composer-peel): A PHP development tool for stripping development-only metadata from `composer.json` release manifests.
