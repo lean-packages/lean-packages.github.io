@@ -41,6 +41,8 @@
   --lang-js-bg: rgba(250, 204, 21, 0.12);
   --lang-zig: #f7a41d;
   --lang-zig-bg: rgba(247, 164, 29, 0.12);
+  --lang-ruby: #f87171;
+  --lang-ruby-bg: rgba(248, 113, 113, 0.12);
 
   /* Typography */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -619,6 +621,18 @@ code {
   border-color: rgba(247, 164, 29, 0.4);
 }
 
+.terminal-tab[data-term-target="term-ruby"]:hover {
+  color: var(--lang-ruby);
+  border-color: rgba(248, 113, 113, 0.3);
+  background-color: rgba(248, 113, 113, 0.08);
+}
+
+.terminal-tab[data-term-target="term-ruby"].active {
+  color: var(--lang-ruby);
+  background-color: var(--lang-ruby-bg);
+  border-color: rgba(248, 113, 113, 0.4);
+}
+
 .terminal-panel {
   display: none;
 }
@@ -767,6 +781,7 @@ code {
 .python-theme { background-color: var(--lang-python-bg); color: var(--lang-python); border: 1px solid rgba(96, 165, 250, 0.3); }
 .js-theme { background-color: var(--lang-js-bg); color: var(--lang-js); border: 1px solid rgba(250, 204, 21, 0.3); }
 .zig-theme { background-color: var(--lang-zig-bg); color: var(--lang-zig); border: 1px solid rgba(247, 164, 29, 0.3); }
+.ruby-theme { background-color: var(--lang-ruby-bg); color: var(--lang-ruby); border: 1px solid rgba(248, 113, 113, 0.3); }
 
 .eco-content {
   display: flex;
@@ -1004,6 +1019,7 @@ code {
 .lang-python { background-color: var(--lang-python-bg); color: var(--lang-python); border: 1px solid rgba(96, 165, 250, 0.3); }
 .lang-js { background-color: var(--lang-js-bg); color: var(--lang-js); border: 1px solid rgba(250, 204, 21, 0.3); }
 .lang-zig { background-color: var(--lang-zig-bg); color: var(--lang-zig); border: 1px solid rgba(247, 164, 29, 0.3); }
+.lang-ruby { background-color: var(--lang-ruby-bg); color: var(--lang-ruby); border: 1px solid rgba(248, 113, 113, 0.3); }
 
 .version-badge {
   font-size: 0.75rem;

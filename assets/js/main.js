@@ -117,7 +117,7 @@ function initTerminalTabs() {
  * Uses sessionStorage cache to prevent API rate limiting.
  */
 function initVersionFetcher() {
-  const repos = ['php-lean', 'cargo-lean', 'py-lean', 'js-lean', 'zig-lean'];
+  const repos = ['php-lean', 'cargo-lean', 'py-lean', 'js-lean', 'zig-lean', 'ruby-lean'];
   const CACHE_KEY_PREFIX = 'lean_pkg_ver_';
   const CACHE_TTL = 3600 * 1000; // 1 hour
 

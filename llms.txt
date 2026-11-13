@@ -29,6 +29,7 @@ The tools are designed to operate non-destructively. They manage packaging confi
 - PHP: `.gitattributes` `export-ignore` attributes for Composer distribution archives.
 - Rust: `[package].exclude` in `Cargo.toml` for Cargo packages.
 - Python: Native source distribution exclusion mechanisms, including modern `pyproject.toml` build backend configuration.
+- Ruby: `Gem::Specification#files` in `.gemspec` for RubyGems package archives.
 - JavaScript and TypeScript: npm's `files` allowlist in `package.json` and `.npmignore` rules.
 - Zig: `.paths` allowlist in `build.zig.zon` for Zig package manager archives.
 
@@ -45,6 +46,10 @@ The tools are designed to operate non-destructively. They manage packaging confi
 ### Python
 
 - [py-lean](https://github.com/lean-packages/py-lean): A Python tool for detecting, configuring, and fixing missing source exclusion patterns in package build configuration.
+
+### Ruby
+
+- [ruby-lean](https://github.com/lean-packages/ruby-lean): A CLI tool for auditing `.gemspec` file lists and verifying `.gem` archives to keep published Ruby gems lean.
 
 ### JavaScript and TypeScript
 

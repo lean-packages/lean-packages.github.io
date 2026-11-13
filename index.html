@@ -6,7 +6,7 @@
   <!-- Primary Meta Tags -->
   <title>lean-packages — Less baggage. Leaner software distributions.</title>
   <meta name="title" content="lean-packages — Less baggage. Leaner software distributions.">
-  <meta name="description" content="A collection of open-source developer tools helping developers ship leaner software distribution archives across PHP, Rust, Python, JavaScript, and Zig.">
+  <meta name="description" content="A collection of open-source developer tools helping developers ship leaner software distribution archives across PHP, Rust, Python, Ruby, JavaScript, and Zig.">
   <meta name="theme-color" content="#0d1117">
   <link rel="canonical" href="https://lean-packages.github.io/">
 
@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://lean-packages.github.io/">
   <meta property="og:site_name" content="lean-packages">
   <meta property="og:title" content="lean-packages — Less baggage. Leaner software distributions.">
-  <meta property="og:description" content="A collection of open-source developer tools helping developers ship leaner software distribution archives across PHP, Rust, Python, JavaScript, and Zig.">
+  <meta property="og:description" content="A collection of open-source developer tools helping developers ship leaner software distribution archives across PHP, Rust, Python, Ruby, JavaScript, and Zig.">
   <meta property="og:image" content="https://lean-packages.github.io/assets/og-image.png">
   <meta property="og:image:secure_url" content="https://lean-packages.github.io/assets/og-image.png">
   <meta property="og:image:type" content="image/png">
@@ -27,7 +27,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://lean-packages.github.io/">
   <meta name="twitter:title" content="lean-packages — Less baggage. Leaner software distributions.">
-  <meta name="twitter:description" content="A collection of open-source developer tools helping developers ship leaner software distribution archives across PHP, Rust, Python, JavaScript, and Zig.">
+  <meta name="twitter:description" content="A collection of open-source developer tools helping developers ship leaner software distribution archives across PHP, Rust, Python, Ruby, JavaScript, and Zig.">
   <meta name="twitter:image" content="https://lean-packages.github.io/assets/og-image.png">
   <meta name="twitter:image:alt" content="lean-packages — Open-source developer tools for lean software distribution archives">
 
@@ -151,6 +151,7 @@
                 <button class="terminal-tab active" role="tab" aria-selected="true" data-term-target="term-php">PHP</button>
                 <button class="terminal-tab" role="tab" aria-selected="false" data-term-target="term-rust">Rust</button>
                 <button class="terminal-tab" role="tab" aria-selected="false" data-term-target="term-python">Python</button>
+                <button class="terminal-tab" role="tab" aria-selected="false" data-term-target="term-ruby">Ruby</button>
                 <button class="terminal-tab" role="tab" aria-selected="false" data-term-target="term-javascript">JavaScript</button>
                 <button class="terminal-tab" role="tab" aria-selected="false" data-term-target="term-zig">Zig</button>
               </div>
@@ -198,6 +199,21 @@
                 <div class="diff-item diff-remove">- tox.ini</div>
               </div>
               <div class="terminal-line t-success"><span class="t-indicator">✓</span> Package archive size reduced: <span class="t-stat">890 KB → 94 KB (-89.4%)</span></div>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor">_</span></div>
+            </div>
+
+            <!-- Ruby Demo -->
+            <div class="terminal-body font-mono terminal-panel" id="term-ruby" role="tabpanel" aria-label="Ruby ruby-lean demonstration" hidden>
+              <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">ruby-lean lint</span> <span class="t-flag">--diff</span></div>
+              <div class="terminal-output t-muted">Auditing gemspec declared files and .gem archive contents...</div>
+              <div class="terminal-line t-warn">Found 4 non-runtime items unexcluded from .gemspec:</div>
+              <div class="terminal-diff">
+                <div class="diff-item diff-remove">- spec/</div>
+                <div class="diff-item diff-remove">- .github/</div>
+                <div class="diff-item diff-remove">- Gemfile.lock</div>
+                <div class="diff-item diff-remove">- Rakefile</div>
+              </div>
+              <div class="terminal-line t-success"><span class="t-indicator">✓</span> Package archive size reduced: <span class="t-stat">1.2 MB → 110 KB (-90.8%)</span></div>
               <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor">_</span></div>
             </div>
 
@@ -281,6 +297,17 @@
               <h3 class="eco-title">py-lean</h3>
               <p class="eco-desc">Detects and updates <code>source-exclude</code> patterns in <code>pyproject.toml</code> for modern Python builds.</p>
               <div class="eco-target font-mono">pyproject.toml</div>
+            </div>
+          </a>
+
+          <a href="#project-ruby" class="eco-card" data-lang="ruby">
+            <div class="eco-icon-wrap ruby-theme">
+              <span class="eco-lang-label">Ruby</span>
+            </div>
+            <div class="eco-content">
+              <h3 class="eco-title">ruby-lean</h3>
+              <p class="eco-desc">Audits <code>.gemspec</code> declared files and verifies <code>.gem</code> archives to keep published gems lean.</p>
+              <div class="eco-target font-mono">.gemspec</div>
             </div>
           </a>
 
@@ -625,6 +652,53 @@
             </div>
           </article>
 
+          <!-- Ruby: ruby-lean -->
+          <article class="project-card" id="project-ruby" data-repo="ruby-lean">
+            <div class="project-card-header">
+              <div class="project-meta">
+                <span class="lang-badge lang-ruby">Ruby</span>
+                <span class="version-badge font-mono" id="version-ruby-lean" title="Latest version from GitHub API">
+                  <span class="v-text">v0.1.0</span>
+                  <span class="v-status" aria-hidden="true"></span>
+                </span>
+              </div>
+              <a href="https://github.com/lean-packages/ruby-lean" class="repo-link" target="_blank" rel="noopener noreferrer" aria-label="ruby-lean on GitHub">
+                <span class="repo-name">lean-packages/ruby-lean</span>
+                <svg class="icon icon-external" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">ruby-lean</h3>
+              <p class="project-description">
+                A CLI tool for auditing <code>.gemspec</code> file lists and verifying <code>.gem</code> archives to prevent development artifacts and test files from bloating published Ruby gems.
+              </p>
+
+              <!-- Dynamic Install Tabs -->
+              <div class="install-container">
+                <div class="install-tabs" role="tablist" aria-label="Installation options for ruby-lean">
+                  <button class="tab-btn active" role="tab" aria-selected="true" data-cmd="gem install ruby-lean">RubyGems</button>
+                  <button class="tab-btn" role="tab" aria-selected="false" data-cmd="bundle add ruby-lean --group development">Bundler</button>
+                </div>
+                <div class="install-box">
+                  <code class="font-mono install-code" id="cmd-ruby-lean">gem install ruby-lean</code>
+                  <button class="copy-btn" aria-label="Copy installation command" title="Copy to clipboard" data-copy-target="cmd-ruby-lean">
+                    <svg class="icon icon-copy" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+                      <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25v-7.5z"/>
+                      <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25v-7.5zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25h-7.5z"/>
+                    </svg>
+                    <svg class="icon icon-check" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
           <!-- JavaScript / TypeScript: js-lean -->
           <article class="project-card" id="project-javascript" data-repo="js-lean">
             <div class="project-card-header">
@@ -788,6 +862,10 @@
                 <li class="faq-lang-item">
                   <span class="lang-badge lang-python">Python</span>
                   <span class="faq-lang-desc">Uses the <code>uv_build</code> backend's <code>source-exclude</code> and <code>wheel-exclude</code> settings in <code>pyproject.toml</code>.</span>
+                </li>
+                <li class="faq-lang-item">
+                  <span class="lang-badge lang-ruby">Ruby</span>
+                  <span class="faq-lang-desc">Uses <code>Gem::Specification#files</code> in <code>.gemspec</code> to audit and filter file lists before building <code>.gem</code> archives.</span>
                 </li>
                 <li class="faq-lang-item">
                   <span class="lang-badge lang-js">JavaScript</span>
